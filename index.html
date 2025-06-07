@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky's Story - An Interactive Children's Tale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="book-container">
+        <div class="book-cover" id="bookCover">
+            <div class="cover-content">
+                <h1 class="title">Lucky's Story</h1>
+                <p class="subtitle">A Tale of Hope and Friendship</p>
+                <div class="author">In the style of E.B. White</div>
+                <div class="illustration-placeholder">
+                    <img src="lucky-cover.png" alt="Lucky the three-legged dog" class="cover-image">
+                </div>
+                <button class="start-reading-btn" onclick="startReading()">Begin Reading</button>
+            </div>
+        </div>
+
+        <div class="story-page hidden" id="storyPage">
+            <div class="page-header">
+                <div class="page-number">Page <span id="currentPage">1</span> of <span id="totalPages">4</span></div>
+                <button class="audio-btn" onclick="toggleAudio()">🔊</button>
+            </div>
+
+            <div class="story-content">
+                <div class="scene scene-1 active" id="scene1">
+                    <div class="scene-illustration">
+                        <img src="shelter-scene.png" alt="Lucky at the shelter" class="scene-image">
+                    </div>
+                    <div class="text-content">
+                        <h2>Chapter 1: A New Beginning</h2>
+                        <div class="story-text">
+                            <p>The wan morning light revealed Lucky huddled deep within the cold corner of his kennel. His fur, the muted color of dusty earth, bore the marks of neglect, and a bandage was clumsily wrapped where a leg should have been.</p>
+                            
+                            <p>He flinched at the slightest sound – a dropped bucket, a barking dog – his wide eyes filled with a silent, unanswered question. The concrete floor felt cold beneath him, and the unfamiliar smells of the shelter made his nose twitch with uncertainty.</p>
+                            
+                            <p>Then, as the morning grew brighter, a hand, gentle and reassuring, slid a bowl of fresh water into the kennel. It was followed by another bowl, this one filled with kibble that smelled of chicken and comfort. A soft voice whispered, "Hello there, little fellow. You're safe now."</p>
+                            
+                            <p>Lucky's tail gave the smallest of wags – barely visible, but there nonetheless, like the first green shoot of spring pushing through winter soil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scene scene-2" id="scene2">
+                    <div class="scene-illustration">
+                        <img src="training-scene.png" alt="Lucky during training" class="scene-image">
+                    </div>
+                    <div class="text-content">
+                        <h2>Chapter 2: Learning to Trust</h2>
+                        <div class="story-text">
+                            <p>Learning to navigate the world on three legs proved to be a considerable challenge for Lucky. He stumbled and fell more times than anyone could count, but each time, with a quiet determination, he resolutely pushed himself back up.</p>
+                            
+                            <p>Sarah, his trainer, had patience that seemed to stretch as far as the summer sky. Each day, a kind and gentle hand offered Lucky a small, savory treat, a silent and consistent promise of safety and unwavering love. Slowly, almost imperceptibly, Lucky began to tentatively wag his tail.</p>
+                            
+                            <p>The training sessions took place in a sunny room filled with soft cushions and the scent of lavender. Lucky learned to sit, to stay, and most importantly, to listen with his heart. He discovered that his missing leg didn't make him less than whole – it made him special.</p>
+                            
+                            <p>During a particularly challenging session, Lucky, completely unprompted, leaned his full weight against Sarah's leg, a profound gesture of complete and unconditional trust. Sarah's eyes grew misty as she whispered, "You're going to help so many children, Lucky. You're going to be magnificent."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scene scene-3" id="scene3">
+                    <div class="scene-illustration">
+                        <img src="reading-scene.png" alt="Lucky helping a child read" class="scene-image">
+                    </div>
+                    <div class="text-content">
+                        <h2>Chapter 3: A Friend in Need</h2>
+                        <div class="story-text">
+                            <p>Lily sat hesitantly across from Lucky, her small hands clutching the book tightly. Her eyes remained fixed on the printed words, but her voice was barely a whisper, lost in a sea of self-doubt. The library corner where they sat was quiet, dappled with afternoon sunlight that danced across the pages.</p>
+                            
+                            <p>"I can't read very well," Lily confided to Lucky, her voice trembling like a leaf in an autumn breeze. Lucky tilted his head, his warm brown eyes full of understanding. He had known struggle too.</p>
+                            
+                            <p>As Lily stumbled haltingly over a particularly difficult word, Lucky gently rested his head on the open book, a comforting weight that seemed to silently whisper, "Try again, you can do it." His tail wagged slowly, encouragingly.</p>
+                            
+                            <p>Word by word, sentence by sentence, Lily's confidence grew. Lucky remained perfectly still, offering his quiet presence like a steady lighthouse beam. When she finished reading the entire page, her voice noticeably stronger and clearer now, a radiant smile slowly spread across her face.</p>
+                            
+                            <p>"He likes my story," she declared with newfound confidence, gently stroking Lucky's incredibly soft fur. Lucky's tail wagged with pure joy, and in that moment, both child and dog had found exactly what they needed – a friend who understood.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scene scene-4" id="scene4">
+                    <div class="scene-illustration">
+                        <img src="happy-ending.png" alt="Lucky with multiple children" class="scene-image">
+                    </div>
+                    <div class="text-content">
+                        <h2>Epilogue: Lucky's Legacy</h2>
+                        <div class="story-text">
+                            <p>Months passed, and Lucky became the most beloved therapy dog at the library. Children who once struggled with reading now bounded through the doors, eager to share their stories with their three-legged friend.</p>
+                            
+                            <p>Lucky had learned something wonderful: being different wasn't a weakness – it was a gift. His gentle spirit and patient heart touched every child he met, proving that sometimes the most broken things, when mended with love, become the strongest of all.</p>
+                            
+                            <p>Sarah often watched from across the room as Lucky worked his quiet magic, and she knew that rescuing him had been one of the best decisions she'd ever made. Lucky hadn't just found a home – he had found his purpose.</p>
+                        </div>
+                        
+                        <div class="message-box">
+                            <h3>A Message of Hope</h3>
+                            <p><em>Adopting an animal isn't simply about providing them with a forever home; it's about opening your heart and soul to a lifetime filled with unconditional love, unwavering companionship, and immeasurable joy. Every rescued animal has a story to tell and love to give – sometimes they just need someone to believe in them first.</em></p>
+                            
+                            <div class="adoption-info">
+                                <p><strong>Consider adopting a pet today and discover the magic of unconditional love.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-btn prev-btn" onclick="previousPage()" disabled>← Previous</button>
+                <button class="nav-btn next-btn" onclick="nextPage()">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="gentle-reading-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+

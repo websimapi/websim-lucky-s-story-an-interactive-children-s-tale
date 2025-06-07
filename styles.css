@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.book-container {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.book-cover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.author {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.cover-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 20px auto;
+    border: 4px solid rgba(255,255,255,0.3);
+}
+
+.start-reading-btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.start-reading-btn:hover {
+    background: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.story-page {
+    padding: 40px;
+    min-height: 600px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.page-number {
+    font-weight: 600;
+    color: #666;
+}
+
+.audio-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.audio-btn:hover {
+    background: #f0f0f0;
+}
+
+.scene {
+    display: none;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.scene.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.scene-illustration {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.scene-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.text-content h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2d3748;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.story-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.message-box {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.message-box h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: #8b4513;
+    margin-bottom: 15px;
+}
+
+.message-box p {
+    color: #5d4e75;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.adoption-info {
+    background: rgba(255,255,255,0.7);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.nav-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Crimson Text', serif;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .book-container {
+        margin: 10px;
+    }
+    
+    .story-page {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .scene-image {
+        height: 200px;
+    }
+    
+    .story-text {
+        font-size: 1rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
